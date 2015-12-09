@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+        <title>Bootstrap 3</title>
+        <link rel = "stylesheet" type = "text/css" href = "countdown.css">
+        <!--<link href = "bootstrap/css/bootstrap.css" rel = "stylesheet">-->
+        <meta charset="utf-8">
+
+    </head>
+
+    <body>
+        <div align = "center">
+            <h1>LET THE COUNTDOWN BEGIN</h>
+        </div>
+        <h2>
+            <div align = "center">
+                <span id = "countdown"></span>
+            </div>
+        <div align = "center">
+            <form action="action_page.php">
+                enter date:
+                <input id = "datedate" type="datetime-local" name="datetime">
+                <input type="submit" value="Send">
+            </form>
+        </div>
+        <script>
+            var target_date = new Date("December 14, 2015 08:15:00").getTime();
+            var days, hours, minutes, seconds;
+
+            var countdown = document.getElementById("countdown");
+            setInterval(function () {
+
+            }, 1000);
+
+            setInterval(function () {
+
+            var current_date = new Date().getTime();
+            var seconds_left = (target_date - current_date) / 1000;
+            days = parseInt(seconds_left / 86400);
+            seconds_left = seconds_left % 86400;
+
+            hours = parseInt(seconds_left / 3600);
+            seconds_left = seconds_left % 3600;
+
+            minutes = parseInt(seconds_left / 60);
+            seconds = parseInt(seconds_left % 60);
+
+            countdown.innerHTML = days + " days " + hours + " hours " + minutes + " minutes " + seconds + " seconds " ;
+
+            }, 1000);
+        </script>
+        </h2>
+
+    </body>
+</html>

@@ -1,0 +1,13 @@
+body {
+    background-color: orange;
+    color: gray;
+    font-family: Monospace;
+}
+h1 {
+    font-size: 500%;
+    border-style: solid
+}
+h2 {
+    font-size: 300%;
+    border-style: groove;
+}
